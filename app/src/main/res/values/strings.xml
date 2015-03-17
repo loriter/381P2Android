@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleMjpegView</string>
+    <string name="hostname">Host Name (IP address)</string>
+    <string name="portnum">Port Number</string>
+    <string name="start">Start</string>
+    <string name="defaultHostName">192.168.0.118</string>
+    <string name="defaultPortNum">5000</string>
+    <string name="onclick">onClick</string>
+    <string name="preference">Preference</string>
+    <string name="height">Height</string>
+    <string name="width">Width</string>
+    <string name="defaultWidth">320</string>
+    <string name="defaultHeight">240</string>
+</resources>

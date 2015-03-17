@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <com.camera.simplemjpeg.MjpegView
+		android:id="@+id/mv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Down"
+        android:id="@+id/buttonDown"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Up"
+        android:id="@+id/buttonUp"
+        android:layout_above="@+id/buttonDown"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:text="Left"
+        android:id="@+id/buttonLeft"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:text="Right"
+        android:id="@+id/buttonRight"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonLeft" />
+</RelativeLayout>
