@@ -5,17 +5,27 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class MjpegActivity extends Activity {
 	private static final boolean DEBUG=false;
     private static final String TAG = "MJPEG";
 
     private MjpegView mv = null;
+    private String mHostName = "IPTHING";
+    private int mPort = 5000;
+
+    BluetoothSocket btSocket;
+    BluetoothDevice btDevice = null;
     
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +36,38 @@ public class MjpegActivity extends Activity {
         
         setContentView(R.layout.main);
         mv = (MjpegView) findViewById(R.id.mv);
+        final Button up = (Button) findViewById(R.id.buttonUp);
+        final Button down = (Button) findViewById(R.id.buttonDown);
+        final Button right = (Button) findViewById(R.id.buttonRight);
+        final Button left = (Button) findViewById(R.id.buttonLeft);
+
+        up.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent e) {
+                //TODO Up listener
+                return true;
+            }
+        });
+
+        down.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent e) {
+                //TODO Up listener
+                return true;
+            }
+        });
+
+        right.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent e) {
+                //TODO Up listener
+                return true;
+            }
+        });
+
+        left.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent e) {
+                //TODO Up listener
+                return true;
+            }
+        });
         
         // receive parameters from PreferenceActivity
         Bundle bundle = getIntent().getExtras();

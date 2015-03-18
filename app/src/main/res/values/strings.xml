@@ -12,4 +12,8 @@
     <string name="width">Width</string>
     <string name="defaultWidth">320</string>
     <string name="defaultHeight">240</string>
+    <string name="buttonRight">Right</string>
+    <string name="buttonUp">Up</string>
+    <string name="buttonLeft">Left</string>
+    <string name="buttonDown">Down</string>
 </resources>

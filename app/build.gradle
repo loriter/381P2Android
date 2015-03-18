@@ -4,6 +4,13 @@ android {
     compileSdkVersion 15
     buildToolsVersion "21.1.2"
 
+    sourceSets {
+        main{
+            jniLibs.srcDirs = ['native-libs']
+            jni.srcDirs = [];
+        }
+    }
+
     defaultConfig {
         applicationId "com.camera.simplemjpeg"
         minSdkVersion 8
@@ -18,6 +25,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            debuggable true
         }
     }
 }

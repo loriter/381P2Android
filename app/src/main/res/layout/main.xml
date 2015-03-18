@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:id="@+id/main">
+
     <com.camera.simplemjpeg.MjpegView
 		android:id="@+id/mv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-		android:layout_weight="1"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp"
         android:layout_alignParentTop="true"
@@ -17,7 +17,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="Down"
+        android:text="@string/buttonDown"
         android:id="@+id/buttonDown"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
@@ -25,7 +25,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="Up"
+        android:text="@string/buttonUp"
         android:id="@+id/buttonUp"
         android:layout_above="@+id/buttonDown"
         android:layout_alignParentRight="true" />
@@ -33,7 +33,7 @@
     <Button
         android:layout_width="70dp"
         android:layout_height="100dp"
-        android:text="Left"
+        android:text="@string/buttonLeft"
         android:id="@+id/buttonLeft"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true" />
@@ -41,7 +41,7 @@
     <Button
         android:layout_width="70dp"
         android:layout_height="100dp"
-        android:text="Right"
+        android:text="@string/buttonRight"
         android:id="@+id/buttonRight"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/buttonLeft" />
