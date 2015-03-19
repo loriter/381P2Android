@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SimpleMjpegView</string>
+    <string name="app_name">CarController</string>
     <string name="hostname">Host Name (IP address)</string>
     <string name="portnum">Port Number</string>
     <string name="start">Start</string>
