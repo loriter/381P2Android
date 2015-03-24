@@ -52,18 +52,6 @@ public class MainActivity extends Activity {
 
         btAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        final class workerThread implements Runnable {
-            private String btMsg;
-
-            public workerThread(String msg) {
-                btMsg = msg;
-            }
-
-            public void run() {
-                sendBTMsg(btMsg);
-            }
-        }
-
         up.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent e) {
@@ -72,10 +60,10 @@ public class MainActivity extends Activity {
                 switch(e.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         Log.i("Up", "Pressed");
-                        (new Thread(new workerThread("u"))).start();
+                        sendBTMsg("u");
                         break;
                     case MotionEvent.ACTION_UP:
-                        (new Thread(new workerThread("nu"))).start();
+                        sendBTMsg("nu");
                         Log.i("Up", "Let go");
                         break;
                 }
@@ -88,10 +76,10 @@ public class MainActivity extends Activity {
             public boolean onTouch(View v, MotionEvent e) {
                 switch(e.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
-                        (new Thread(new workerThread("d"))).start();
+                        sendBTMsg("d");
                         break;
                     case MotionEvent.ACTION_UP:
-                        (new Thread(new workerThread("nd"))).start();
+                        sendBTMsg("nd");
                         break;
                 }
                 return true;
