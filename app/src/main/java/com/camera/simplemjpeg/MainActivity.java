@@ -144,18 +144,8 @@ public class MainActivity extends Activity {
             }
         }
 
-        UUID uuid = UUID.fromString("94f39d29-7d6d-437d-973b-fba39e49d4ee");
-        try {
-            btSocket = btDevice.createRfcommSocketToServiceRecord(uuid);
-            while(!btSocket.isConnected()) {
-                btSocket.connect();
-            }
-            btOutputStream = btSocket.getOutputStream();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        
+        //connectBT();
+
         // receive parameters from PreferenceActivity
         Bundle bundle = getIntent().getExtras();
         String hostname = bundle.getString( PreferenceActivity.KEY_HOSTNAME);
@@ -171,15 +161,29 @@ public class MainActivity extends Activity {
     public void onResume() {
     	if(DEBUG) Log.d(TAG,"onResume()");
         super.onResume();
+        connectBT();
     }
 
     public void onStart() {
     	if(DEBUG) Log.d(TAG,"onStart()");
         super.onStart();
     }
+
+    public void onRestart() {
+        if(DEBUG) Log.d(TAG,"onRestart");
+        super.onRestart();
+    }
+
     public void onPause() {
     	if(DEBUG) Log.d(TAG,"onPause()");
         super.onPause();
+        sendBTMsg("rc");
+        try {
+            btSocket.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public void onStop() {
     	if(DEBUG) Log.d(TAG,"onStop()");
@@ -203,5 +207,20 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
 
+    }
+
+    public void connectBT() {
+        UUID uuid = UUID.fromString("94f39d29-7d6d-437d-973b-fba39e49d4ee");
+        try {
+            btSocket = btDevice.createRfcommSocketToServiceRecord(uuid);
+            while(!btSocket.isConnected()) {
+                btSocket.connect();
+            }
+            btOutputStream = btSocket.getOutputStream();
+            Log.i("Socket", "Connected");
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
