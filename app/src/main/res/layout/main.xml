@@ -42,4 +42,52 @@
         android:id="@+id/buttonRight"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/buttonLeft" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal"
+        android:id="@+id/normal"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/filter3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter 3"
+        android:id="@+id/filter3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter 5"
+        android:id="@+id/filter5"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/filter3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter 1"
+        android:id="@+id/filter1"
+        android:layout_above="@+id/normal"
+        android:layout_alignRight="@+id/normal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter 2"
+        android:id="@+id/filter2"
+        android:layout_above="@+id/filter3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter 4"
+        android:id="@+id/filter4"
+        android:layout_above="@+id/filter5"
+        android:layout_alignLeft="@+id/filter5" />
 </RelativeLayout>

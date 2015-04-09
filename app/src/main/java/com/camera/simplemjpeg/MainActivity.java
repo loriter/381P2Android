@@ -48,6 +48,12 @@ public class MainActivity extends Activity {
         final Button down = (Button) findViewById(R.id.buttonDown);
         final Button right = (Button) findViewById(R.id.buttonRight);
         final Button left = (Button) findViewById(R.id.buttonLeft);
+        final Button normfil = (Button) findViewById(R.id.normal);
+        final Button fil1 = (Button) findViewById(R.id.filter1);
+        final Button fil2 = (Button) findViewById(R.id.filter2);
+        final Button fil3 = (Button) findViewById(R.id.filter3);
+        final Button fil4 = (Button) findViewById(R.id.filter4);
+        final Button fil5 = (Button) findViewById(R.id.filter5);
         final WebView wv = (WebView) findViewById(R.id.webstream);
 
         btAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -113,6 +119,48 @@ public class MainActivity extends Activity {
                         break;
                 }
                 return true;
+            }
+        });
+
+        normfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("nf");
+            }
+        });
+
+        fil1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("f1");
+            }
+        });
+
+        fil2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("f2");
+            }
+        });
+
+        fil3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("f3");
+            }
+        });
+
+        fil4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("f4");
+            }
+        });
+
+        fil5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendBTMsg("f5");
             }
         });
 
